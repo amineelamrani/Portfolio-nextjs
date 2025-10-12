@@ -3,10 +3,15 @@ import { WobbleCard } from "./ui/wobble-card";
 
 export default function HighlightGrid() {
   return (
-    <div className="w-full flex flex-col gap-7 md:gap-7 py-5">
+    <div className="w-full flex flex-col gap-7 md:gap-7 py-5 px-2">
       <div id="upper-grid" className="flex flex-col lg:flex-row w-full gap-7">
-        <WobbleCard containerClassName="w-full lg:w-1/2">
-          <h1>Card1</h1>
+        <WobbleCard
+          containerClassName="w-full lg:w-1/2 bg-[url('/b1.svg')] bg-cover bg-center "
+          className="flex items-end"
+        >
+          <h1 className="text-2xl font-bold w-3/5">
+            I prioritize client collaboration, fostering open communication
+          </h1>
         </WobbleCard>
 
         <div className="w-full lg:w-1/2 flex flex-col md:flex-row lg:flex-col gap-7">
