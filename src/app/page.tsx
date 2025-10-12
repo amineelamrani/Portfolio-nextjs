@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import HighlightGrid from "@/components/HighlightGrid";
 import { Spotlight } from "@/components/ui/spotlight";
 import React from "react";
 
@@ -11,6 +12,7 @@ export default function Home() {
       />
       <div className="container mx-auto pt-25 flex flex-col items-center">
         <Hero />
+        <HighlightGrid />
       </div>
     </div>
   );
