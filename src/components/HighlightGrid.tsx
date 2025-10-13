@@ -398,7 +398,7 @@ export default function HighlightGrid() {
     <div className="w-full flex flex-col gap-7 md:gap-7 py-5 px-2">
       <div id="upper-grid" className="flex flex-col lg:flex-row w-full gap-7">
         <WobbleCard
-          containerClassName="w-full lg:w-3/5 bg-[rgb(9,0,31)] bg-[url('/b1.svg')] bg-cover bg-center "
+          containerClassName="w-full lg:w-3/5 bg-[rgb(15,5,45)] bg-[url('/b1.svg')] bg-cover bg-center "
           className="flex items-end"
         >
           <h1 className="text-2xl font-bold w-3/5">
@@ -408,7 +408,7 @@ export default function HighlightGrid() {
 
         <div className="w-full lg:w-2/5 flex flex-col md:flex-row lg:flex-col gap-7">
           <WobbleCard
-            containerClassName="w-full md:w-1/2 lg:w-full bg-[rgb(9,0,31)]"
+            containerClassName="w-full md:w-1/2 lg:w-full bg-[rgb(15,5,45)]"
             className="flex items-center justify-center h-full relative"
           >
             <h1 className="text-xl  font-bold absolute text-center top-5">
@@ -420,7 +420,7 @@ export default function HighlightGrid() {
           </WobbleCard>
 
           <WobbleCard
-            containerClassName="w-full md:w-1/2 lg:w-full"
+            containerClassName="w-full md:w-1/2 lg:w-full bg-[rgb(15,5,45)]"
             className="flex w-full "
           >
             <div id="improving-tech-tack-left" className="w-3/5">
@@ -434,16 +434,16 @@ export default function HighlightGrid() {
 
       <div id="lower-grid" className="flex flex-col md:flex-row w-full gap-7">
         <div className="w-full md:w-2/5 flex flex-col gap-7">
-          <WobbleCard containerClassName="w-full">
+          <WobbleCard containerClassName="w-full bg-[rgb(15,5,45)]">
             <h1>Card4</h1>
           </WobbleCard>
 
-          <WobbleCard containerClassName="w-full">
+          <WobbleCard containerClassName="w-full bg-[rgb(15,5,45)]">
             <h1>Card5</h1>
           </WobbleCard>
         </div>
 
-        <WobbleCard containerClassName="w-full md:w-3/5">
+        <WobbleCard containerClassName="w-full md:w-3/5 bg-[rgb(15,5,45)]">
           <h1>Card6</h1>
         </WobbleCard>
       </div>
