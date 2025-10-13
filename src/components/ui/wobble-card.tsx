@@ -7,10 +7,12 @@ export const WobbleCard = ({
   children,
   containerClassName,
   className,
+  applyNoise = true,
 }: {
   children: React.ReactNode;
   containerClassName?: string;
   className?: string;
+  applyNoise?: boolean;
 }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -37,7 +39,7 @@ export const WobbleCard = ({
         transition: "transform 0.1s ease-out",
       }}
       className={cn(
-        "mx-auto w-full bg-indigo-800  relative rounded-2xl overflow-hidden",
+        "mx-auto w-full bg-indigo-800  relative rounded-2xl overflow-hidden border-1 border-gray-600",
         containerClassName
       )}
     >
@@ -57,7 +59,7 @@ export const WobbleCard = ({
           }}
           className={cn("h-full px-4 py-20 sm:px-10", className)}
         >
-          <Noise />
+          <Noise applyNoise={applyNoise!} />
           {children}
         </motion.div>
       </div>
@@ -65,11 +67,12 @@ export const WobbleCard = ({
   );
 };
 
-const Noise = () => {
+const Noise = ({ applyNoise }: { applyNoise: boolean }) => {
   return (
     <div
       className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]"
       style={{
+        backgroundImage: applyNoise ? "url(/noise.webp)" : "",
         backgroundSize: "30%",
       }}
     ></div>
