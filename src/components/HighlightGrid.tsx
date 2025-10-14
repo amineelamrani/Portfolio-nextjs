@@ -502,8 +502,8 @@ export default function HighlightGrid() {
                   <Button
                     borderRadius="0.7rem"
                     duration={10}
-                    containerClassName="w-full px-10 z-30"
-                    className="bg-slate-900 text-white border-slate-800 py-3 z-30 hover:cursor-pointer flex flex-row gap-2 items-center"
+                    containerClassName=""
+                    className="bg-slate-900 text-white border-slate-800 py-3 px-15 hover:cursor-pointer flex flex-row gap-2 items-center"
                   >
                     <Copy size={15} /> Copy my email adress
                   </Button>
