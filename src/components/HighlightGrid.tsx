@@ -5,6 +5,8 @@ import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
+import { Button } from "./ui/moving-border";
+import { Copy } from "lucide-react";
 
 const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
   ssr: false,
@@ -484,20 +486,27 @@ export default function HighlightGrid() {
               className="absolute right-1 -bottom-2"
             />
           </WobbleCard>
-          <div className="w-full relative rounded-xl">
+          <div className="w-full relative rounded-xl ">
             <WobbleCard
-              containerClassName="w-full h-full bg-[rgb(4, 7, 29)]"
+              containerClassName="w-full h-full bg-[rgb(4, 7, 29)] z-10"
               className="relative w-full"
             >
               <BackgroundGradientAnimation
                 containerClassName="w-full h-full"
                 className="flex w-full h-full"
               >
-                <div className="z-50 w-full flex flex-col items-center justify-center border text-white font-bold pointer-events-none">
+                <div className="z-50 w-full flex flex-col items-center justify-between py-5 text-white font-bold">
                   <p className="text-xl text-center px-2">
                     Do you want to start a project together?
                   </p>
-                  <button>Copy</button>
+                  <Button
+                    borderRadius="0.7rem"
+                    duration={10}
+                    containerClassName="w-full px-10 z-30"
+                    className="bg-slate-900 text-white border-slate-800 py-3 z-30 hover:cursor-pointer flex flex-row gap-2 items-center"
+                  >
+                    <Copy size={15} /> Copy my email adress
+                  </Button>
                 </div>
               </BackgroundGradientAnimation>
             </WobbleCard>
