@@ -513,8 +513,14 @@ export default function HighlightGrid() {
           </div>
         </div>
 
-        <WobbleCard containerClassName="w-full md:w-3/5 bg-[rgb(4, 7, 29)]">
-          <h1>Card6</h1>
+        <WobbleCard
+          containerClassName="w-full md:w-3/5 bg-[rgb(4, 7, 29)] bg-[url('/b5.svg')] bg-contain bg-position-[right_top_0rem] md:bg-position-[right_top_3rem] bg-no-repeat p-0"
+          className="flex flex-col items-start justify-start pt-5"
+        >
+          <h3 className="text-sm text-gray-400">The Inside Scoop</h3>
+          <h1 className="text-xl font-bold">
+            Currently building a lot of JS projects
+          </h1>
         </WobbleCard>
       </div>
     </div>

@@ -31,10 +31,7 @@ export function Button({
 }) {
   return (
     <Component
-      className={cn(
-        "relative overflow-hidden text-xl z-100",
-        containerClassName
-      )}
+      className={cn("relative overflow-hidden text-xl", containerClassName)}
       onClick={() => console.log("clicked")}
       style={{
         borderRadius: borderRadius,
