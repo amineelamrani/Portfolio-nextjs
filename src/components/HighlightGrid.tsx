@@ -2,6 +2,9 @@
 import React from "react";
 import { WobbleCard } from "./ui/wobble-card";
 import dynamic from "next/dynamic";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 
 const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
   ssr: false,
@@ -465,13 +468,40 @@ export default function HighlightGrid() {
 
       <div id="lower-grid" className="flex flex-col md:flex-row w-full gap-7">
         <div className="w-full md:w-2/5 flex flex-col gap-7">
-          <WobbleCard containerClassName="w-full bg-[rgb(4, 7, 29)]">
-            <h1>Card4</h1>
+          <WobbleCard
+            containerClassName="w-full bg-[rgb(4, 7, 29)]"
+            className="bg-[url('/grid.svg')] bg-cover bg-center flex flex-col justify-start items-start relative"
+            applyNoise={false}
+          >
+            <h1 className="z-20  bg-clip-text text-xl font-bold absolute top-5 left-5 ">
+              Tech enthusiast with a passion for development.
+            </h1>
+            <Image
+              src="/b4.svg"
+              alt="loadingsvg"
+              width={210}
+              height={100}
+              className="absolute right-1 -bottom-2"
+            />
           </WobbleCard>
-
-          <WobbleCard containerClassName="w-full bg-[rgb(4, 7, 29)]">
-            <h1>Card5</h1>
-          </WobbleCard>
+          <div className="w-full relative rounded-xl">
+            <WobbleCard
+              containerClassName="w-full h-full bg-[rgb(4, 7, 29)]"
+              className="relative w-full"
+            >
+              <BackgroundGradientAnimation
+                containerClassName="w-full h-full"
+                className="flex w-full h-full"
+              >
+                <div className="z-50 w-full flex flex-col items-center justify-center border text-white font-bold pointer-events-none">
+                  <p className="text-xl text-center px-2">
+                    Do you want to start a project together?
+                  </p>
+                  <button>Copy</button>
+                </div>
+              </BackgroundGradientAnimation>
+            </WobbleCard>
+          </div>
         </div>
 
         <WobbleCard containerClassName="w-full md:w-3/5 bg-[rgb(4, 7, 29)]">
