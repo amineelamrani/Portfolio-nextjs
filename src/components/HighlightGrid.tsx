@@ -8,6 +8,16 @@ const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
 });
 
 export default function HighlightGrid() {
+  const techStack = [
+    "ReactJS",
+    "Express",
+    "NodeJS",
+    "",
+    "",
+    "Typescript",
+    "NextJS",
+    "MongoDB",
+  ];
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -422,13 +432,33 @@ export default function HighlightGrid() {
 
           <WobbleCard
             containerClassName="w-full md:w-1/2 lg:w-full bg-[rgb(4, 7, 29)]"
-            className="flex w-full "
+            className="flex w-full relative"
           >
             <div id="improving-tech-tack-left" className="w-3/5">
-              <h3>I constantly try to improve</h3>
-              <h1>My tech Stack</h1>
+              <h3 className="text-sm text-gray-400">
+                I constantly try to improve
+              </h3>
+              <h1 className="text-xl font-bold">My tech Stack</h1>
             </div>
-            <div id="tech-stack-items" className="w-2/5"></div>
+            <div
+              id="tech-stack-items"
+              className="w-2/5 absolute top-0 bottom-0 right-0 rounded-r-2xl items-stretch h-full flex flex-col flex-wrap"
+            >
+              {techStack.map((tech, index) => (
+                <div
+                  className="p-1 h-1/4"
+                  key={`index-techstack${index * 100}`}
+                >
+                  <p
+                    className={`${
+                      tech !== "" ? "bg-[#1d0364]" : "bg-[#2f0a96]"
+                    } px-4 rounded-md py-2 h-full opacity-50`}
+                  >
+                    {tech}
+                  </p>
+                </div>
+              ))}
+            </div>
           </WobbleCard>
         </div>
       </div>
