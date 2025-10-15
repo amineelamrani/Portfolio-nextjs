@@ -37,7 +37,7 @@ export default function ProjectsCard({
         </div>
 
         <div className="flex flex-col">
-          <h1 className="text-2xl font-bold">{title}</h1>
+          <h1 className="text-2xl font-bold py-2">{title}</h1>
           <p className="text-gray-400">{description}</p>
         </div>
         <div className="w-full flex justify-between">
