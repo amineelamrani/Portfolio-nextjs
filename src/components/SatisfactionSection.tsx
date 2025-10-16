@@ -1,5 +1,6 @@
 import React from "react";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -21,6 +22,29 @@ const testimonials = [
     title: "Directore of AlphaStream Technologies.",
   },
 ];
+
+const appLogos = [
+  {
+    logo: "/app.svg",
+    appName: "/appName.svg",
+  },
+  {
+    logo: "/cloud.svg",
+    appName: "/cloudName.svg",
+  },
+  {
+    logo: "/dock.svg",
+    appName: "/dockerName.svg",
+  },
+  {
+    logo: "/host.svg",
+    appName: "/hostName.svg",
+  },
+  {
+    logo: "/stream.svg",
+    appName: "/streamName.svg",
+  },
+];
 export default function SatisfactionSection() {
   return (
     <div className="flex flex-col gap-10 items-center py-10 w-full">
@@ -40,6 +64,32 @@ export default function SatisfactionSection() {
           className=""
           image="/profile.svg"
         />
+      </div>
+      <div
+        id="appLogos"
+        className="w-full flex flex-wrap justify-center items-center gap-20"
+      >
+        {appLogos.map((app, index) => (
+          <div
+            key={`${app.logo}-${index}`}
+            className="flex gap-1 items-center justify-center"
+          >
+            <Image
+              src={app.logo}
+              alt={`AppLogo-${index}`}
+              width={50}
+              height={100}
+              className=""
+            />
+            <Image
+              src={app.appName}
+              alt={`AppLogoName-${index}`}
+              width={100}
+              height={50}
+              className=""
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
