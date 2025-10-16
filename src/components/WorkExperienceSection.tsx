@@ -36,7 +36,7 @@ export default function WorkExperienceSection() {
       </h1>
       <div
         id="experiences-grid"
-        className="w-full flex flex-wrap items-stretch"
+        className="w-full flex flex-wrap justify-items-stretch items-stretch "
       >
         {experiencesData.map((experience, index) => (
           <WorkExperienceCards

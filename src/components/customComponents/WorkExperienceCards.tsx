@@ -14,7 +14,7 @@ export default function WorkExperienceCards({
   description,
 }: ComponentExperienceProps) {
   return (
-    <div className="w-full md:w-1/2 h-fit px-2 py-2">
+    <div className="w-full md:w-1/2 px-2 py-2">
       <Button
         borderRadius="1.75rem"
         className="bg-[rgb(4, 7, 29)] border-slate-800 backdrop-blur-xl flex flex-row items-center justify-center p-7 gap-4 w-full"
