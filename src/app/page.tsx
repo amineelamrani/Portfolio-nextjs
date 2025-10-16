@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import HighlightGrid from "@/components/HighlightGrid";
 import ProjectSelection from "@/components/ProjectSelection";
+import SatisfactionSection from "@/components/SatisfactionSection";
 import { Spotlight } from "@/components/ui/spotlight";
 import React from "react";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <HighlightGrid />
         <ProjectSelection />
+        <SatisfactionSection />
       </div>
     </div>
   );
