@@ -1,5 +1,32 @@
 import React from "react";
-import { Button } from "./ui/Moving-border2";
+import WorkExperienceCards from "./customComponents/WorkExperienceCards";
+
+const experiencesData = [
+  {
+    logo: "/exp1.svg",
+    title: "Frontend Engineer Intern",
+    description:
+      "Assisted in the development of a web-based platform using React.js, enhancing interactivity",
+  },
+  {
+    logo: "/exp2.svg",
+    title: "Mobile App Dev - JSM Tech",
+    description:
+      "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+  },
+  {
+    logo: "/exp3.svg",
+    title: "Freelance App Dev Project",
+    description:
+      "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+  },
+  {
+    logo: "/exp4.svg",
+    title: "Lead Frontend Developer",
+    description:
+      "Developed and maintained user-facing features using modern frontend technologies.",
+  },
+];
 
 export default function WorkExperienceSection() {
   return (
@@ -7,16 +34,18 @@ export default function WorkExperienceSection() {
       <h1 className="text-4xl font-bold text-center">
         My <span className="text-purple-300">work experience</span>
       </h1>
-      <div id="experiences-grid" className="w-full">
-        <Button
-          borderRadius="1.75rem"
-          className="bg-[rgb(4, 7, 29)] border-slate-800 backdrop-blur-xl "
-          borderClassName="h-30 w-20 rounded-full bg-[radial-gradient(#593d78_80%,#593d78_50%)] "
-          containerClassName="w-full h-50 "
-          duration={8000}
-        >
-          Borders are cool
-        </Button>
+      <div
+        id="experiences-grid"
+        className="w-full flex flex-wrap items-stretch"
+      >
+        {experiencesData.map((experience, index) => (
+          <WorkExperienceCards
+            key={`experience-${experience.title}-${index}`}
+            logo={experience.logo}
+            title={experience.title}
+            description={experience.description}
+          />
+        ))}
       </div>
     </div>
   );
