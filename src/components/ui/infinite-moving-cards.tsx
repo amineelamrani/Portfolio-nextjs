@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -9,6 +10,7 @@ export const InfiniteMovingCards = ({
   speed = "fast",
   pauseOnHover = true,
   className,
+  image,
 }: {
   items: {
     quote: string;
@@ -19,6 +21,7 @@ export const InfiniteMovingCards = ({
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
+  image: string;
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -98,9 +101,16 @@ export const InfiniteMovingCards = ({
               <span className="relative z-20 text-sm leading-[1.6] font-normal text-white">
                 {item.quote}
               </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
+              <div className="relative z-20 mt-6 flex flex-row gap-2 items-center">
+                <Image
+                  src={image}
+                  alt={item.name}
+                  width={50}
+                  height={50}
+                  className="rounded-full h-full"
+                />
                 <span className="flex flex-col gap-1">
-                  <span className="text-sm leading-[1.6] font-normal text-white">
+                  <span className="text-xl font-bold leading-[1.6] text-white">
                     {item.name}
                   </span>
                   <span className="text-sm leading-[1.6] font-normal text-white">

@@ -38,6 +38,7 @@ export default function SatisfactionSection() {
           direction="right"
           speed="slow"
           className=""
+          image="/profile.svg"
         />
       </div>
     </div>
