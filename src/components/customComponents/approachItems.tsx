@@ -8,13 +8,21 @@ export default function CanvasRevealEffectDemo() {
   return (
     <>
       <div className="py-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-8">
-        <Card title="Sheetal is Nisha" icon={<AceternityIcon />}>
+        <Card
+          title="Planning & Strategy"
+          desc="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          icon={<PhaseButton phaseNumber={1} />}
+        >
           <CanvasRevealEffect
             animationSpeed={5.1}
             containerClassName="bg-emerald-900"
           />
         </Card>
-        <Card title="Nisha is Munni" icon={<AceternityIcon />}>
+        <Card
+          title="Planning & Strategy"
+          desc="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          icon={<PhaseButton phaseNumber={2} />}
+        >
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-[#ab189f]"
@@ -27,7 +35,11 @@ export default function CanvasRevealEffectDemo() {
           {/* Radial gradient for the cute fade */}
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
         </Card>
-        <Card title="Munni is Aditi" icon={<AceternityIcon />}>
+        <Card
+          title="Planning & Strategy"
+          desc="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          icon={<PhaseButton phaseNumber={3} />}
+        >
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-sky-600"
@@ -42,10 +54,12 @@ export default function CanvasRevealEffectDemo() {
 const Card = ({
   title,
   icon,
+  desc,
   children,
 }: {
   title: string;
   icon: React.ReactNode;
+  desc: string;
   children?: React.ReactNode;
 }) => {
   const [hovered, setHovered] = React.useState(false);
@@ -53,7 +67,7 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="border border-gray-500  group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 h-[30rem] relative"
+      className="border border-gray-500  group/canvas-card flex items-center justify-center dark:border-white/[0.2]  w-full mx-auto px-4 py-14 md:py-34 relative"
     >
       <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
       <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
@@ -72,37 +86,17 @@ const Card = ({
         )}
       </AnimatePresence>
 
-      <div className="relative z-20">
-        <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
+      <div className="relative z-20 h-full">
+        <div className="absolute flex items-center justify-center group-hover/canvas-card:opacity-0 transition duration-200 w-full h-full mx-auto">
           {icon}
         </div>
-        <h2 className="dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
-          {title}
-        </h2>
+
+        <div className="h-full text-xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10  group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 flex flex-col gap-5 items-center justify-center">
+          <h1 className="text-2xl font-bold text-center">{title}</h1>
+          <p className="text-center">{desc}</p>
+        </div>
       </div>
     </div>
-  );
-};
-
-const AceternityIcon = () => {
-  return (
-    <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-10 w-10 text-black dark:text-white group-hover/canvas-card:text-white "
-    >
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
-        style={{ mixBlendMode: "darken" }}
-      />
-    </svg>
   );
 };
 
@@ -119,5 +113,18 @@ export const Icon = ({ className, ...rest }: any) => {
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
     </svg>
+  );
+};
+
+const PhaseButton = ({ phaseNumber }: { phaseNumber: number }) => {
+  return (
+    <>
+      <button className="relative inline-flex h-15 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 ">
+        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-8 py-1 text-xl font-bold text-purple-300 backdrop-blur-3xl">
+          <p>Phase {phaseNumber}</p>
+        </span>
+      </button>
+    </>
   );
 };
