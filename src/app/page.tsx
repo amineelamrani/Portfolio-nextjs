@@ -1,3 +1,4 @@
+import GetInTouchSection from "@/components/GetInTouchSection";
 import Hero from "@/components/Hero";
 import HighlightGrid from "@/components/HighlightGrid";
 import ProjectSelection from "@/components/ProjectSelection";
@@ -21,6 +22,7 @@ export default function Home() {
         <SatisfactionSection />
         <WorkExperienceSection />
         <WorkApproachSection />
+        <GetInTouchSection />
       </div>
     </div>
   );
