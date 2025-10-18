@@ -3,6 +3,7 @@ import HighlightGrid from "@/components/HighlightGrid";
 import ProjectSelection from "@/components/ProjectSelection";
 import SatisfactionSection from "@/components/SatisfactionSection";
 import { Spotlight } from "@/components/ui/spotlight";
+import WorkApproachSection from "@/components/WorkApproachSection";
 import WorkExperienceSection from "@/components/WorkExperienceSection";
 import React from "react";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <ProjectSelection />
         <SatisfactionSection />
         <WorkExperienceSection />
+        <WorkApproachSection />
       </div>
     </div>
   );
