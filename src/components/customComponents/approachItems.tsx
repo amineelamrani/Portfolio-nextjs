@@ -7,7 +7,7 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 export default function CanvasRevealEffectDemo() {
   return (
     <>
-      <div className="py-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-8">
+      <div className="py-20 flex flex-col md:flex-row items-stretch justify-stretch w-full gap-4 mx-auto px-8">
         <Card
           title="Planning & Strategy"
           desc="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
@@ -19,8 +19,8 @@ export default function CanvasRevealEffectDemo() {
           />
         </Card>
         <Card
-          title="Planning & Strategy"
-          desc="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          title="Development & Progress Update"
+          desc="Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
           icon={<PhaseButton phaseNumber={2} />}
         >
           <CanvasRevealEffect
@@ -36,8 +36,8 @@ export default function CanvasRevealEffectDemo() {
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
         </Card>
         <Card
-          title="Planning & Strategy"
-          desc="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          title="Development & Launch"
+          desc="This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up."
           icon={<PhaseButton phaseNumber={3} />}
         >
           <CanvasRevealEffect
