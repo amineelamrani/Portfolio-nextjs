@@ -12,12 +12,17 @@ export default function Home() {
   return (
     <div className="">
       <Spotlight
-        className="-top-40 left-0 md:-top-20 md:left-30"
+        className="-top-40 -left-50 md:-top-30 md:-left-20"
         fill="white"
       />
+      <Spotlight
+        className="-top-40 left-10 md:-top-60 md:left-40"
+        fill="blue"
+      />
+
       <div className="absolute bg-[url(/grid.svg)] top-0 left-0 right-0 h-200 md:h-150 lg:h-200 bg-contain bg-center bg-repeat-round" />
 
-      <div className="container mx-auto pt-25 flex flex-col items-center">
+      <div className="container mx-auto px-5 lg:px-45 pt-25 flex flex-col items-center">
         <Hero />
         <HighlightGrid />
         <ProjectSelection />

@@ -410,40 +410,42 @@ export default function HighlightGrid() {
   ];
 
   return (
-    <div className="w-full flex flex-col gap-7 md:gap-7 py-10 px-2">
+    <div className="w-full flex flex-col gap-5 md:gap-7 py-10">
       <div id="upper-grid" className="flex flex-col lg:flex-row w-full gap-7">
         <WobbleCard
-          containerClassName="w-full lg:w-3/5 bg-[rgb(9,0,31)] bg-[url('/b1.svg')] bg-cover bg-center "
+          containerClassName="w-full lg:w-3/5 bg-[rgb(9,0,31)] bg-[url('/b1.svg')] bg-cover bg-center lg:min-h-[60vh]"
           className="flex items-end"
           applyNoise={false}
         >
-          <h1 className="text-2xl font-bold w-3/5">
+          <h1 className="text-base sm:text-xl md:text2xl lg:text-3xl font-bold w-3/5">
             I prioritize client collaboration, fostering open communication
           </h1>
         </WobbleCard>
 
-        <div className="w-full lg:w-2/5 flex flex-col md:flex-row lg:flex-col gap-7">
+        <div className="w-full lg:w-2/5 flex flex-col md:flex-row lg:flex-col gap-7 lg:min-h-[60vh]">
           <WobbleCard
-            containerClassName="w-full md:w-1/2 lg:w-full bg-[rgb(4, 7, 29)]"
+            containerClassName="w-full md:w-1/2 lg:w-full bg-[rgb(4, 7, 29)] lg:h-1/2"
             className="flex items-center justify-center h-full relative"
           >
-            <h1 className="text-xl  font-bold absolute text-center top-5">
+            <h1 className="text-base md:text-xl font-bold absolute text-center top-5 px-5">
               I&apos;m very flexible with time zone communications
             </h1>
-            <div className="absolute w-full top-10 md:top-8 h-80 md:h-90 z-10">
+            <div className="absolute w-full top-10 md:top-20 lg:top-10 h-80 md:h-90 z-10">
               <World data={sampleArcs} globeConfig={globeConfig} />
             </div>
           </WobbleCard>
 
           <WobbleCard
-            containerClassName="w-full md:w-1/2 lg:w-full bg-[rgb(4, 7, 29)]"
+            containerClassName="w-full md:w-1/2 lg:w-full bg-[rgb(4, 7, 29)] lg:h-1/2"
             className="flex w-full relative"
           >
             <div id="improving-tech-tack-left" className="w-3/5">
-              <h3 className="text-sm text-gray-400">
+              <h3 className="text-xs md:text-sm text-gray-400">
                 I constantly try to improve
               </h3>
-              <h1 className="text-xl font-bold">My tech Stack</h1>
+              <h1 className="text-base md:text-lg lg:text-xl font-bold">
+                My tech Stack
+              </h1>
             </div>
             <div
               id="tech-stack-items"
@@ -475,7 +477,7 @@ export default function HighlightGrid() {
             className="bg-[url('/grid.svg')] bg-cover bg-center flex flex-col justify-start items-start relative"
             applyNoise={false}
           >
-            <h1 className="z-20  bg-clip-text text-xl font-bold absolute top-5 left-5 ">
+            <h1 className="z-20 bg-clip-text text-lg sm:text-xl font-bold absolute top-5 left-5 right-5">
               Tech enthusiast with a passion for development.
             </h1>
             <Image
@@ -496,14 +498,14 @@ export default function HighlightGrid() {
                 className="flex w-full h-full"
               >
                 <div className="z-50 w-full flex flex-col items-center justify-between py-5 text-white font-bold">
-                  <p className="text-xl text-center px-2">
+                  <p className="text-lg sm:text-xl text-center px-2">
                     Do you want to start a project together?
                   </p>
                   <Button
                     borderRadius="0.7rem"
                     duration={10}
                     containerClassName=""
-                    className="bg-slate-900 text-white border-slate-800 py-3 px-15 hover:cursor-pointer flex flex-row gap-2 items-center"
+                    className="bg-slate-900 text-white border-slate-800 py-3 px-15 md:px-5 lg:px-10 hover:cursor-pointer flex flex-row gap-2 items-center"
                   >
                     <Copy size={15} /> Copy my email adress
                   </Button>
@@ -518,7 +520,7 @@ export default function HighlightGrid() {
           className="flex flex-col items-start justify-start pt-5"
         >
           <h3 className="text-sm text-gray-400">The Inside Scoop</h3>
-          <h1 className="text-xl font-bold">
+          <h1 className="text-lg sm:text-xl font-bold">
             Currently building a lot of JS projects
           </h1>
         </WobbleCard>

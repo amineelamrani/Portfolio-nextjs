@@ -39,7 +39,7 @@ const projectData = [
 export default function ProjectSelection() {
   return (
     <div className="flex flex-col gap-10 items-center py-10 w-full">
-      <h1 className="text-4xl font-bold text-center">
+      <h1 className="text-3xl md:text-5xl font-bold text-center">
         A small selection of{" "}
         <span className="text-purple-300">recent projects</span>
       </h1>

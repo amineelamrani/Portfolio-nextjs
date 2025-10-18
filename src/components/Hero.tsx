@@ -5,18 +5,18 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 export default function Hero() {
   return (
-    <div className="relative py-24 px-45 flex flex-col items-center justify-center text-center gap-7">
-      <h3 className="text-xl text-gray-400 uppercase z-10">
+    <div className="relative py-24 flex flex-col items-center justify-center text-center">
+      <h3 className=" text-gray-400 uppercase z-10">
         Dynamic Web Magic with Next.js
       </h3>
-      <h1 className="text-5xl font-bold z-10 text-white">
+      <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold z-10 text-white pb-7">
         <TextGenerateEffect
-          className="text-white text-5xl font-bold z-10"
+          className="text-white text-5xl md:text-6xl lg:text-8xl font-bold z-10"
           words={`Transforming Concepts into Seamless User Experiences`}
           filter={false}
         />
       </h1>
-      <h2 className="text-2xl z-10">
+      <h2 className="text-lg md:text-xl lg:text-2xl z-10 pt-5 pb-10">
         Hi! I&apos;m Amine, a MERN & Next.js Developer based in Morocco.
       </h2>
       <button className="relative inline-flex h-12 overflow-hidden rounded-md p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 ">
