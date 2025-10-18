@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="flex justify-between items-center w-full p-10">
+    <div className=" relative flex justify-between items-center w-full p-10">
       <div>Copyright © 2025 Amine ELAMRANI</div>
       <div className="flex gap-2 items-center">
         <a
@@ -42,6 +42,7 @@ export default function Footer() {
           />
         </a>
       </div>
+      <div className="absolute bg-[url(/footer-grid.svg)] w-full h-100 bg-cover bg-center right-0 left-0"></div>
     </div>
   );
 }
