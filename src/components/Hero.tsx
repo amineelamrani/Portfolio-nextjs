@@ -5,14 +5,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 export default function Hero() {
   return (
-    <div className="relative py-24 px-45 flex flex-col items-center justify-center text-center gap-7 border">
-      <div
-        className={cn(
-          "pointer-events-none absolute inset-0 [background-size:80px_80px] select-none z-0 opacity-50",
-          "[background-image:linear-gradient(to_right,#171717_2px,transparent_2px),linear-gradient(to_bottom,#171717_2px,transparent_1px)]"
-        )}
-      />
-
+    <div className="relative py-24 px-45 flex flex-col items-center justify-center text-center gap-7">
       <h3 className="text-xl text-gray-400 uppercase z-10">
         Dynamic Web Magic with Next.js
       </h3>

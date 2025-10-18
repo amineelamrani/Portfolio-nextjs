@@ -10,11 +10,13 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <Spotlight
         className="-top-40 left-0 md:-top-20 md:left-30"
         fill="white"
       />
+      <div className="absolute bg-[url(/grid.svg)] top-0 left-0 right-0 h-200 md:h-150 lg:h-200 bg-contain bg-center bg-repeat-round" />
+
       <div className="container mx-auto pt-25 flex flex-col items-center">
         <Hero />
         <HighlightGrid />
