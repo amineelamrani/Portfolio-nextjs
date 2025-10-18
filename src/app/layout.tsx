@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <FloatingNav
-          className="text-white  bg-[rgb(17, 25, 40)] "
+          className="text-white bg-slate-950"
           navItems={[
             { name: "About", link: "/" },
             { name: "Projects", link: "/" },
