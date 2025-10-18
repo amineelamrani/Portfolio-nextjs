@@ -1,0 +1,47 @@
+import { SquareCode } from "lucide-react";
+import Image from "next/image";
+import React from "react";
+
+export default function Footer() {
+  return (
+    <div className="flex justify-between items-center w-full p-10">
+      <div>Copyright © 2025 Amine ELAMRANI</div>
+      <div className="flex gap-2 items-center">
+        <a
+          href="https://github.com/amineelamrani/Portfolio-nextjs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SquareCode size={35} />
+        </a>
+
+        <a
+          href="https://ma.linkedin.com/in/amine-elamrani"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={"/link.svg"}
+            alt=""
+            width={50}
+            height={50}
+            className="w-8 h-8 "
+          />
+        </a>
+        <a
+          href="https://github.com/amineelamrani"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={"/git.svg"}
+            alt=""
+            width={50}
+            height={50}
+            className="w-8 h-8"
+          />
+        </a>
+      </div>
+    </div>
+  );
+}
