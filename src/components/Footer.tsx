@@ -42,7 +42,7 @@ export default function Footer() {
           />
         </a>
       </div>
-      <div className="absolute bg-[url(/footer-grid.svg)] w-full h-100 bg-cover bg-center right-0 left-0"></div>
+      <div className="absolute bg-[url(/footer-grid.svg)] w-full h-100 bg-cover bg-top right-0 left-0 bottom-0"></div>
     </div>
   );
 }
