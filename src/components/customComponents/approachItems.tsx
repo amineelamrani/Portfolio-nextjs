@@ -7,7 +7,7 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 export default function CanvasRevealEffectDemo() {
   return (
     <>
-      <div className="py-20 flex flex-col md:flex-row items-stretch justify-stretch w-full gap-4 mx-auto px-8">
+      <div className="py-20 flex flex-col md:flex-row items-stretch justify-center w-full gap-4 mx-auto px-8">
         <Card
           title="Planning & Strategy"
           desc="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
@@ -67,7 +67,7 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="border border-gray-500  group/canvas-card flex items-center justify-center dark:border-white/[0.2]  w-full mx-auto px-4 py-14 md:py-34 relative"
+      className="border border-gray-500  group/canvas-card flex items-center justify-center dark:border-white/[0.2]  w-full mx-auto px-4 py-14 md:py-34 relative lg:min-w-[250px]"
     >
       <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
       <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
@@ -92,8 +92,8 @@ const Card = ({
         </div>
 
         <div className="h-full text-xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10  group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 flex flex-col gap-5 items-center justify-center">
-          <h1 className="text-2xl font-bold text-center">{title}</h1>
-          <p className="text-center">{desc}</p>
+          <h1 className="text-xl lg:text-2xl font-bold text-center">{title}</h1>
+          <p className="text-sm lg:text-base text-center">{desc}</p>
         </div>
       </div>
     </div>
