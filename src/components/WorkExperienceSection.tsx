@@ -31,12 +31,12 @@ const experiencesData = [
 export default function WorkExperienceSection() {
   return (
     <div className="flex flex-col gap-10 items-center py-10 w-full">
-      <h1 className="text-4xl font-bold text-center">
+      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center">
         My <span className="text-purple-300">work experience</span>
       </h1>
       <div
         id="experiences-grid"
-        className="w-full flex flex-wrap justify-items-stretch items-stretch "
+        className="w-full flex flex-wrap justify-center items-stretch "
       >
         {experiencesData.map((experience, index) => (
           <WorkExperienceCards

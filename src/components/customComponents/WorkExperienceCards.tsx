@@ -14,7 +14,7 @@ export default function WorkExperienceCards({
   description,
 }: ComponentExperienceProps) {
   return (
-    <div className="w-full md:w-1/2 px-2 py-2">
+    <div className="w-full md:w-1/2 px-2 py-2 lg:min-w-[450px]">
       <Button
         borderRadius="1.75rem"
         className="bg-[rgb(4, 7, 29)] border-slate-800 backdrop-blur-xl flex flex-row items-center justify-center p-7 gap-4 w-full"
@@ -30,8 +30,8 @@ export default function WorkExperienceCards({
           className="w-1/4"
         />
         <div className="flex flex-col gap-1 items-start text-start justify-start">
-          <h1 className="text-xl font-bold text-white">{title}</h1>
-          <p className="">{description}</p>
+          <h1 className="text-lg lg:text-xl font-bold text-white">{title}</h1>
+          <p className="text-sm lg:text-base">{description}</p>
         </div>
       </Button>
     </div>
