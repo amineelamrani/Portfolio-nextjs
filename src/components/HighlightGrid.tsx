@@ -427,10 +427,10 @@ export default function HighlightGrid() {
             containerClassName="w-full md:w-1/2 lg:w-full bg-[rgb(4, 7, 29)] lg:h-1/2"
             className="flex items-center justify-center h-full relative"
           >
-            <h1 className="text-base md:text-xl font-bold absolute text-center top-5 px-5">
+            <h1 className="text-base md:text-xl font-bold absolute text-center top-5 px-2">
               I&apos;m very flexible with time zone communications
             </h1>
-            <div className="absolute w-full top-10 md:top-20 lg:top-10 h-80 md:h-90 z-10">
+            <div className="absolute w-full top-10 md:top-15 lg:top-25 h-80 md:h-90 z-10">
               <World data={sampleArcs} globeConfig={globeConfig} />
             </div>
           </WobbleCard>
