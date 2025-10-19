@@ -67,7 +67,7 @@ export default function SatisfactionSection() {
       </div>
       <div
         id="appLogos"
-        className="w-full flex flex-wrap justify-center items-center gap-20"
+        className="w-full flex flex-wrap justify-center items-center gap-10 md:gap-14 lg:gap-20"
       >
         {appLogos.map((app, index) => (
           <div
@@ -79,14 +79,14 @@ export default function SatisfactionSection() {
               alt={`AppLogo-${index}`}
               width={50}
               height={100}
-              className=""
+              className="h-5 md:h-10"
             />
             <Image
               src={app.appName}
               alt={`AppLogoName-${index}`}
               width={100}
               height={50}
-              className=""
+              className="h-5 md:h-10"
             />
           </div>
         ))}
