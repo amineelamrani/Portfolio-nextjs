@@ -90,15 +90,15 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[rgb(4, 7, 29)] text-white px-8 py-6 md:w-[450px]"
+            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border-gray-500 border-[0.2px] bg-[rgb(4, 7, 29)] text-white px-8 py-6 md:w-[450px]"
             key={`${item.name}-${idx}`}
           >
             <blockquote>
               <div
                 aria-hidden="true"
-                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)] p-5"
               ></div>
-              <span className="relative z-20 text-sm leading-[1.6] font-normal text-white">
+              <span className="relative z-20 text-xs sm:text-sm leading-[1.6] font-normal text-white">
                 {item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row gap-2 items-center">
@@ -107,13 +107,13 @@ export const InfiniteMovingCards = ({
                   alt={item.name}
                   width={50}
                   height={50}
-                  className="rounded-full h-full"
+                  className="rounded-full h-full "
                 />
                 <span className="flex flex-col gap-1">
-                  <span className="text-xl font-bold leading-[1.6] text-white">
+                  <span className="text-base sm:text-xl font-bold leading-[1.6] text-white">
                     {item.name}
                   </span>
-                  <span className="text-sm leading-[1.6] font-normal text-white">
+                  <span className="text-xs sm:text-sm leading-[1.6] font-normal text-white">
                     {item.title}
                   </span>
                 </span>
