@@ -1,11 +1,10 @@
 import React from "react";
 import { Send } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 export default function Hero() {
   return (
-    <div className="relative py-24 flex flex-col items-center justify-center text-center">
+    <div className="relative py-14 sm:py-24 flex flex-col items-center justify-center text-center">
       <h3 className=" text-gray-400 uppercase z-10">
         Dynamic Web Magic with Next.js
       </h3>

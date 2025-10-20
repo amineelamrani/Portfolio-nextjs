@@ -7,7 +7,7 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 export default function CanvasRevealEffectDemo() {
   return (
     <>
-      <div className="py-20 flex flex-col md:flex-row items-stretch justify-center w-full gap-4 mx-auto px-8">
+      <div className="py-10 sm:py-20 flex flex-col md:flex-row items-stretch justify-center w-full gap-4 mx-auto px-8">
         <Card
           title="Planning & Strategy"
           desc="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."

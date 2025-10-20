@@ -26,6 +26,7 @@ export const FloatingNav = ({
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
+      // eslint-disable-next-line prefer-const
       let direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
@@ -59,6 +60,7 @@ export const FloatingNav = ({
           className
         )}
       >
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         {navItems.map((navItem: any, idx: number) => (
           <a
             key={`link=${idx}`}
@@ -67,8 +69,8 @@ export const FloatingNav = ({
               "relative items-center flex space-x-1 hover:text-gray-400"
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            <span className="hidden">{navItem.icon}</span>
+            <span className="block text-xs sm:text-sm">{navItem.name}</span>
           </a>
         ))}
       </motion.div>
