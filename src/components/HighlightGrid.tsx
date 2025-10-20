@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { WobbleCard } from "./ui/wobble-card";
 import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
@@ -13,6 +13,8 @@ const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
 });
 
 export default function HighlightGrid() {
+  const [showGif, setShowGif] = useState(false);
+  const [copied, setCopied] = useState(false);
   const techStack = [
     "ReactJS",
     "Express",
@@ -409,6 +411,22 @@ export default function HighlightGrid() {
     },
   ];
 
+  const handleClick = async () => {
+    try {
+      await navigator.clipboard.writeText("amine.elamrani.j.s.s.h@gmail.com");
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+
+    setShowGif(true);
+
+    // Hide it automatically after 3 seconds (optional)
+    setTimeout(() => {
+      setShowGif(false);
+    }, 2000);
+    setCopied(true);
+  };
+
   return (
     <div className="w-full flex flex-col gap-5 md:gap-7 py-10">
       <div id="upper-grid" className="flex flex-col lg:flex-row w-full gap-7">
@@ -497,7 +515,7 @@ export default function HighlightGrid() {
                 containerClassName="w-full h-full"
                 className="flex w-full h-full"
               >
-                <div className="z-50 w-full flex flex-col items-center justify-between py-5 text-white font-bold">
+                <div className="relative z-50 w-full flex flex-col items-center justify-between py-5 text-white font-bold">
                   <p className="text-lg sm:text-xl text-center px-2">
                     Do you want to start a project together?
                   </p>
@@ -505,10 +523,24 @@ export default function HighlightGrid() {
                     borderRadius="0.7rem"
                     duration={10}
                     containerClassName=""
-                    className="bg-slate-900 text-white border-slate-800 py-3 px-15 md:px-5 lg:px-10 hover:cursor-pointer flex flex-row gap-2 items-center"
+                    className={`bg-slate-900 text-white border-slate-800 py-3 px-15 md:px-5 lg:px-10 ${
+                      copied ? "" : "hover:cursor-pointer"
+                    } flex flex-row gap-2 items-center`}
+                    onClick={handleClick}
+                    disabled={copied ? true : false}
                   >
-                    <Copy size={15} /> Copy my email adress
+                    <Copy size={15} />{" "}
+                    {copied ? "Email is Copied!" : "Copy my email adress"}
                   </Button>
+                  {showGif && (
+                    <Image
+                      width={150}
+                      height={150}
+                      src="/confetti.gif"
+                      alt="Copied!"
+                      className="absolute top-0 left-0 w-full h-full object-contain"
+                    />
+                  )}
                 </div>
               </BackgroundGradientAnimation>
             </WobbleCard>
