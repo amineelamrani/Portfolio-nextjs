@@ -3,7 +3,10 @@ import React from "react";
 
 export default function GetInTouchSection() {
   return (
-    <div className="flex flex-col gap-10 items-center py-10 w-full text-center">
+    <div
+      className="flex flex-col gap-10 items-center py-10 w-full text-center"
+      id="contact"
+    >
       <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center">
         Ready to take <span className="text-purple-300">your</span> digital
         presence to the next level?

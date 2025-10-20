@@ -47,7 +47,10 @@ const appLogos = [
 ];
 export default function SatisfactionSection() {
   return (
-    <div className="flex flex-col gap-10 items-center py-10 w-full">
+    <div
+      className="flex flex-col gap-10 items-center py-10 w-full"
+      id="testimonials"
+    >
       <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center">
         Kind words from{" "}
         <span className="text-purple-300">satisfied clients</span>

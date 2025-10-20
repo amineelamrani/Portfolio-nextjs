@@ -428,7 +428,7 @@ export default function HighlightGrid() {
   };
 
   return (
-    <div className="w-full flex flex-col gap-5 md:gap-7 py-10">
+    <div className="w-full flex flex-col gap-5 md:gap-7 py-10" id="about">
       <div id="upper-grid" className="flex flex-col lg:flex-row w-full gap-7">
         <WobbleCard
           containerClassName="w-full lg:w-3/5 bg-[rgb(9,0,31)] bg-[url('/b1.svg')] bg-cover bg-center lg:min-h-[60vh]"

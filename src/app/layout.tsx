@@ -32,10 +32,10 @@ export default function RootLayout({
         <FloatingNav
           className="text-white bg-slate-950"
           navItems={[
-            { name: "About", link: "/" },
-            { name: "Projects", link: "/" },
-            { name: "Testimonials", link: "/" },
-            { name: "Contact", link: "/" },
+            { name: "About", link: "#about" },
+            { name: "Projects", link: "#projects" },
+            { name: "Testimonials", link: "#testimonials" },
+            { name: "Contact", link: "#contact" },
           ]}
         />
         {children}
