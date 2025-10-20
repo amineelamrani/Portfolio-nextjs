@@ -44,6 +44,7 @@ export default function WorkExperienceSection() {
             logo={experience.logo}
             title={experience.title}
             description={experience.description}
+            boxIndex={index}
           />
         ))}
       </div>

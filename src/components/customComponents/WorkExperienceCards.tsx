@@ -6,12 +6,14 @@ interface ComponentExperienceProps {
   logo: string;
   title: string;
   description: string;
+  boxIndex?: number;
 }
 
 export default function WorkExperienceCards({
   logo,
   title,
   description,
+  boxIndex = 0,
 }: ComponentExperienceProps) {
   return (
     <div className="w-full md:w-1/2 px-2 py-2 lg:min-w-[450px]">
@@ -20,7 +22,8 @@ export default function WorkExperienceCards({
         className="bg-[rgb(4, 7, 29)] border-slate-800 backdrop-blur-xl flex flex-row items-center justify-center p-7 gap-4 w-full"
         borderClassName="h-30 w-20 rounded-full bg-[radial-gradient(#593d78_80%,#593d78_50%)] "
         containerClassName="w-full h-full"
-        duration={8000}
+        duration={8000 + 2000 * boxIndex}
+        as="div"
       >
         <Image
           src={logo}
