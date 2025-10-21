@@ -4,35 +4,34 @@ import ProjectsCard from "./customComponents/ProjectsCard";
 const projectData = [
   {
     image: "/p1.png",
-    title: "3D Solar System Planets to Explore",
+    title: "FOREVER E-commerce Website with Admin Dashboard",
     description:
-      "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    url: "https://github.com/amineelamrani",
-    techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+      "Shop effortlessly on this sleek e-commerce platform built with Next.js and TypeScript, featuring secure JWT login, Stripe payments, and an intuitive admin dashboard to manage orders.",
+    url: "https://ecommerce-forever-store-next-js-v2.vercel.app/",
+    techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "stripe.svg"],
   },
   {
     image: "/p2.png",
-    title: "Yoom - Video Conferencing App",
+    title: "Amine's Code Chronicles : Modern Personal Blog",
     description:
-      "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    url: "https://github.com/amineelamrani",
-    techStack: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+      "Amine Blog APP - Built using Next.js, TypeScript, and TailwindCSS, featuring Firebase OAuth and authentication for a modern, secure, and responsive blogging experience.",
+    url: "https://amine-blog-next-js-v2-0.vercel.app/",
+    techStack: ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg", "/mongodb.svg"],
   },
   {
     image: "/p3.png",
-    title: "AI Image SaaS - Canva Application",
+    title: "Branwave AI Landing Page",
     description:
-      "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    url: "https://github.com/amineelamrani",
-    techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+      "A Beautiful AI Landing Page Built using React.js, TailwindCSS and DaisyUI",
+    url: "https://brainwave-amin-amra.netlify.app/",
+    techStack: ["/re.svg", "/tail.svg", "/daisyui.svg"],
   },
   {
     image: "/p4.png",
-    title: "Animated Apple Iphone 3D Website",
-    description:
-      "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    url: "https://github.com/amineelamrani",
-    techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    title: "Amine's Calisthenics Business website idea",
+    description: "Modern and responsive Bootstap based Calisthenics website",
+    url: "https://amineelamrani.github.io/BTI/",
+    techStack: ["/javascript.svg", "/bootstrap.svg"],
   },
 ];
 
