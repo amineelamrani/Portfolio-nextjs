@@ -26,13 +26,13 @@ export default function ProjectsCard({
         containerClassName="w-full h-full p-0 top-0 bg-transparent"
         className="flex flex-col w-full gap-5 p-0 top-0 bg-transparent"
       >
-        <div className="w-full  bg-[url('/bg.png')] bg-cover bg-center flex justify-center items-center pt-15">
+        <div className="w-full  bg-[url('/bg.png')] bg-cover bg-center flex justify-center items-center pt-15 overflow-hidden">
           <Image
             src={image}
             alt={title}
             width={1000}
             height={800}
-            className="w-4/5"
+            className="w-4/5 rotate-6 translate-y-6 rounded-t-xl"
           />
         </div>
 

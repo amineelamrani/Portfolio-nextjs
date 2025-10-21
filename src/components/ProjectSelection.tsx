@@ -3,7 +3,7 @@ import ProjectsCard from "./customComponents/ProjectsCard";
 
 const projectData = [
   {
-    image: "/p1.svg",
+    image: "/p1.png",
     title: "3D Solar System Planets to Explore",
     description:
       "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
@@ -11,7 +11,7 @@ const projectData = [
     techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
   {
-    image: "/p2.svg",
+    image: "/p2.png",
     title: "Yoom - Video Conferencing App",
     description:
       "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
