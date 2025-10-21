@@ -19,7 +19,7 @@ const projectData = [
     techStack: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
   },
   {
-    image: "/p3.svg",
+    image: "/p3.png",
     title: "AI Image SaaS - Canva Application",
     description:
       "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
@@ -27,7 +27,7 @@ const projectData = [
     techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
   },
   {
-    image: "p4.svg",
+    image: "/p4.png",
     title: "Animated Apple Iphone 3D Website",
     description:
       "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
