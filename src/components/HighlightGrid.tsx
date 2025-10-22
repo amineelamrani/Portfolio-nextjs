@@ -553,7 +553,7 @@ export default function HighlightGrid() {
         >
           <h3 className="text-sm text-gray-400">The Inside Scoop</h3>
           <h1 className="text-lg sm:text-xl font-bold">
-            Currently building a lot of JS projects
+            Currently building a lot of Web projects
           </h1>
         </WobbleCard>
       </div>

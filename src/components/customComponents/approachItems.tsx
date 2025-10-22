@@ -10,7 +10,7 @@ export default function CanvasRevealEffectDemo() {
       <div className="py-10 sm:py-20 flex flex-col md:flex-row items-stretch justify-center w-full gap-4 mx-auto px-8">
         <Card
           title="Planning & Strategy"
-          desc="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          desc="With my background in systems engineering and consulting, I start by understanding your goals, audience, and project scope. We'll define site structure, features, and workflows to ensure a seamless web experience tailored to your needs."
           icon={<PhaseButton phaseNumber={1} />}
         >
           <CanvasRevealEffect
@@ -20,7 +20,7 @@ export default function CanvasRevealEffectDemo() {
         </Card>
         <Card
           title="Development & Progress Update"
-          desc="Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
+          desc="Once the plan is set, I dive into building your application using MERN stack and Next.js, keeping you informed throughout. From prototypes to fully functional features, I ensure transparency, collaboration, and high-quality code every step of the way."
           icon={<PhaseButton phaseNumber={2} />}
         >
           <CanvasRevealEffect
@@ -37,7 +37,7 @@ export default function CanvasRevealEffectDemo() {
         </Card>
         <Card
           title="Development & Launch"
-          desc="This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up."
+          desc="This is where your vision comes to life! I turn designs into scalable, responsive, and maintainable code, leveraging my full stack expertise to deliver performant web applications ready for launch and growth."
           icon={<PhaseButton phaseNumber={3} />}
         >
           <CanvasRevealEffect

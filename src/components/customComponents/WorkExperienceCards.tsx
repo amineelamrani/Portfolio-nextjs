@@ -33,8 +33,8 @@ export default function WorkExperienceCards({
           className="w-1/4"
         />
         <div className="flex flex-col gap-1 items-start text-start justify-start">
-          <h1 className="text-lg lg:text-xl font-bold text-white">{title}</h1>
-          <p className="text-sm lg:text-base">{description}</p>
+          <h1 className="text-base lg:text-xl font-bold text-white">{title}</h1>
+          <p className="text-xs sm:text-sm lg:text-base">{description}</p>
         </div>
       </Button>
     </div>
