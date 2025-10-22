@@ -12,13 +12,13 @@ const experiencesData = [
     logo: "/exp2.webp",
     title: "Alten Maroc - EE Architect (Hybrid, Morocco)",
     description:
-      "Provide technical guidance and apply analythical and systems thinking to optimize EE architecture performance.",
+      "Provide technical guidance and apply analytical and systems thinking to optimize EE architecture performance.",
   },
   {
     logo: "/exp2.webp",
     title: "Alten Maroc - Automotive EE Intern (Onsite, Morocco)",
     description:
-      "Gain hands-on experience in engineering workflows and team collaboration",
+      "Gain hands-on experience in engineering workflows and team collaboration.",
   },
   {
     logo: "/exp4.png",
