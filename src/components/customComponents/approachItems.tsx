@@ -87,14 +87,32 @@ const Card = ({
       </AnimatePresence>
 
       <div className="relative z-20 h-full">
-        <div className="absolute flex items-center justify-center group-hover/canvas-card:opacity-0 transition duration-200 w-full h-full mx-auto">
-          {icon}
-        </div>
-
-        <div className="h-full text-xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10  group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 flex flex-col gap-5 items-center justify-center">
-          <h1 className="text-xl lg:text-2xl font-bold text-center">{title}</h1>
-          <p className="text-sm lg:text-base text-center">{desc}</p>
-        </div>
+        {hovered && (
+          <>
+            <div className="absolute invisible flex items-center justify-center transition duration-200 w-full h-full mx-auto">
+              {icon}
+            </div>
+            <div className="h-full text-xl  relative z-20  text-white -translate-y-2 transition duration-200 flex flex-col gap-5 items-center justify-center">
+              <h1 className="text-xl lg:text-2xl font-bold text-center">
+                {title}
+              </h1>
+              <p className="text-sm lg:text-base text-center">{desc}</p>
+            </div>
+          </>
+        )}
+        {!hovered && (
+          <>
+            <div className="absolute visible flex items-center justify-center transition duration-200 w-full h-full mx-auto">
+              {icon}
+            </div>
+            <div className="h-full invisible text-xl  relative z-20  text-white -translate-y-2 transition duration-200 flex flex-col gap-5 items-center justify-center">
+              <h1 className="text-xl lg:text-2xl font-bold text-center">
+                {title}
+              </h1>
+              <p className="text-sm lg:text-base text-center">{desc}</p>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
