@@ -30,7 +30,10 @@ const experiencesData = [
 
 export default function WorkExperienceSection() {
   return (
-    <div className="flex flex-col gap-10 items-center py-10 w-full">
+    <div
+      className="flex flex-col gap-10 items-center py-10 w-full"
+      id="experiences"
+    >
       <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center">
         My <span className="text-purple-300">work experience</span>
       </h1>
