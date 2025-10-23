@@ -2,7 +2,7 @@ import GetInTouchSection from "@/components/GetInTouchSection";
 import Hero from "@/components/Hero";
 import HighlightGrid from "@/components/HighlightGrid";
 import ProjectSelection from "@/components/ProjectSelection";
-import SatisfactionSection from "@/components/SatisfactionSection";
+// import SatisfactionSection from "@/components/SatisfactionSection";
 import { Spotlight } from "@/components/ui/spotlight";
 import WorkApproachSection from "@/components/WorkApproachSection";
 import WorkExperienceSection from "@/components/WorkExperienceSection";
@@ -26,7 +26,7 @@ export default function Home() {
         <Hero />
         <HighlightGrid />
         <ProjectSelection />
-        <SatisfactionSection />
+        {/* <SatisfactionSection /> */}
         <WorkExperienceSection />
         <WorkApproachSection />
         <GetInTouchSection />
