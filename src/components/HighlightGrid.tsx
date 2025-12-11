@@ -413,7 +413,7 @@ export default function HighlightGrid() {
 
   const handleClick = async () => {
     try {
-      await navigator.clipboard.writeText("amine.elamrani.j.s.s.h@gmail.com");
+      await navigator.clipboard.writeText("amine@am1ne.xyz");
     } catch (err) {
       console.error("Failed to copy:", err);
     }
